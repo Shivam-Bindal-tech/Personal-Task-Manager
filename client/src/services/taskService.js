@@ -16,8 +16,10 @@
 import axios from 'axios';
 
 // Base URL for task API endpoints.
-// Vite's proxy will forward this to http://localhost:5000/api/tasks
-const BASE_URL = '/api/tasks';
+// In development, this defaults to '/api/tasks' which uses Vite's proxy.
+// In production, configure VITE_API_URL to point to your deployed backend (e.g. https://your-backend.onrender.com).
+const API_URL = import.meta.env.VITE_API_URL || '';
+const BASE_URL = API_URL ? `${API_URL.replace(/\/$/, '')}/api/tasks` : '/api/tasks';
 
 /**
  * Fetch all tasks from the backend.

@@ -24,12 +24,14 @@ const app = express();
 // We look at system environments first, falling back to 5000 if none is set
 const PORT = process.env.PORT || 5000;
 
-// MIDDLEWARES
-
 // 1. CORS: Enable Cross-Origin Resource Sharing.
-// This allows our React frontend (running on http://localhost:5173 or similar)
-// to make API calls to this backend (running on http://localhost:5000).
-app.use(cors());
+// In development, we allow all origins (*) if CLIENT_URL is not set.
+// In production, we restrict it to our deployed client URL and local development port.
+const clientUrl = process.env.CLIENT_URL;
+app.use(cors({
+  origin: clientUrl ? [clientUrl, 'http://localhost:5173'] : '*',
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
+}));
 
 // 2. Express JSON: Automatically parse JSON data in the body of incoming requests.
 // Without this, req.body will be undefined in our controllers.
