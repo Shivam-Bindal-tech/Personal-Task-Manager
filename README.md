@@ -6,6 +6,16 @@ This codebase was written specifically with beginner developers in mind. Every f
 
 ---
 
+## 🤖 About the Developer & Build
+
+This project was built with the help of **Antigravity**, an AI coding assistant. 
+
+As the developer:
+*   I have a solid understanding of **HTML, CSS, and JavaScript**.
+*   I am currently learning **React** to build interactive, modern frontend interfaces.
+
+---
+
 ## 🚀 Features
 
 ### Core Features (Must-Haves)
