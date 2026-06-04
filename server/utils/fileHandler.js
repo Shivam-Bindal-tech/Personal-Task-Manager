@@ -49,6 +49,9 @@ async function readTasksFromFile() {
  */
 async function writeTasksToFile(tasks) {
   try {
+    // Ensure the parent directory (server/data) exists in production/git environments
+    await fs.mkdir(path.dirname(filePath), { recursive: true });
+
     // Convert the JavaScript array into a readable JSON string with 2 spaces indentation
     const dataText = JSON.stringify(tasks, null, 2);
     
