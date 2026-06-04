@@ -1,0 +1,14 @@
+# Node dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Production builds
+client/dist/
+
+# Local databases / JSON data
+server/data/tasks.json
+
+# System files
+.DS_Store
+Thumbs.db

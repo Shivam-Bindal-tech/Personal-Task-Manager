@@ -1,0 +1,22 @@
+{
+  "name": "personal-task-manager-server",
+  "version": "1.0.0",
+  "description": "Express backend for Personal Task Manager",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "express",
+    "taskmanager",
+    "json-storage"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "uuid": "^9.0.1"
+  }
+}
