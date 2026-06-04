@@ -2,6 +2,8 @@
 
 A beautiful, lightweight, and educational **Full-Stack Task Manager** built with a **React + Vite** frontend and a **Node.js + Express.js** backend. It uses a local JSON file database, making it easy to run without any database setup!
 
+🚀 **Live Demo**: *[View Live Application (Coming Soon!)](https://github.com/Shivam-Bindal-tech/Personal-Task-Manager)*
+
 ---
 
 ## 🤖 About the Developer & Build
@@ -119,6 +121,15 @@ Uses `fs/promises` for async file reads/writes, creating `tasks.json` automatica
 
 ---
 
+## 🔮 Next Steps & Future Improvements
+
+*   🗄️ **Persistent Database**: Replace JSON storage with a real database like MongoDB or PostgreSQL.
+*   🔐 **User Accounts**: Add sign-up, sign-in, and JWT authentication for multi-user task tracking.
+*   🏷️ **Categories & Priorities**: Add task tagging, categories, and priority levels (High/Medium/Low).
+*   🌓 **Theme Toggle**: Enable toggling between glassmorphic dark mode and a sleek light mode.
+
+---
+
 ## 🛠️ Troubleshooting
 
 <details>
@@ -132,3 +143,4 @@ Uses `fs/promises` for async file reads/writes, creating `tasks.json` automatica
     *   *Fix*: Close the other running terminals or modify the port configurations.
 
 </details>
+
