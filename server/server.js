@@ -27,7 +27,8 @@ const PORT = process.env.PORT || 5000;
 // 1. CORS: Enable Cross-Origin Resource Sharing.
 // In development, we allow all origins (*) if CLIENT_URL is not set.
 // In production, we restrict it to our deployed client URL and local development port.
-const clientUrl = process.env.CLIENT_URL;
+// We strip any trailing slashes from CLIENT_URL to prevent CORS mismatches.
+const clientUrl = process.env.CLIENT_URL ? process.env.CLIENT_URL.replace(/\/$/, '') : undefined;
 app.use(cors({
   origin: clientUrl ? [clientUrl, 'http://localhost:5173'] : '*',
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
